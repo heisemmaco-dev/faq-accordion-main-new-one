@@ -1,2 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Kumbh+Sans:wght@400;700&family=Work+Sans:ital,wght@0,400;1,600;1,700&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+
+  /* img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  } */
+
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1 {
+    overflow-wrap: break-word;
+  }
+
+  :root {
+
+--main-bg-White: hsl(0, 0%, 100%);
+--bg-Light-pink: hsl(275, 100%, 97%);
+--Grayish-purple: hsl(292, 16%, 49%);
+--Dark-purple:hsl(292, 42%, 14%);
+--general-padding: 30px;
+  }
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    font-family: 'Work Sans', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size: 0.6rem;
+    font-weight: 400;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background-color: var(--bg-Light-pink);
+    padding: var(--general-padding);
+}
+
+main {
+    max-width: 450px;
+    width: 100%;
+    padding: var(--general-padding);
+    border-radius: 10px;
+
+    background-color: var(--main-bg-White);
+    display: flex;
+    flex-direction: column;
+}
+
+.acccordion_container {
+    color: var(--Grayish-purple);
+}
+
+.img_and_heading_text {
+    display: flex;
+    gap: 10px;
+    color: var(--Dark-purple);
+    font-weight: 900;
+    align-items: center;
+}
+
+.img_and_heading_text img {
+    width: 30px;
+    height: 30px;
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    gap: 8px;
+    cursor: pointer;
+    
+    text-align: start;
+    color: var(--Dark-purple);
+
+}
+
+.header_container strong:is(:hover, :focus) {
+    color: hsl(293, 93%, 24%);
+}
+
+.header_container strong:active {
+    color: var(--Grayish-purple);
+}
+
+.header_container {
+  padding-top: 20px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.acccordion_container:nth-child(n + 2) {
+    border-top: 1px solid var(--bg-Light-pink);
+}
+
+.acccordion_container p {
+    display: none;
+}
+
+.active .acccordion_container p {
+  display: initial;
+}
+
+.header_container .Plus_and_minus_container img {
+    width: 27px;
+    height: 27px;
+}
+
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  .header_container {
+    gap: 10px;
+  }
+
+}
+
+@media screen and (min-width: 450px) {
+  body {
+    font-size: 0.83rem;
+  }
+
+  .header_container {
+    gap: 15px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  body {
+    font-size: 0.84rem;
+  }
+
+  .header_container {
+    gap: 20px;
+  }
+
+  .img_and_heading_text {
+    gap: 27px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    font-size: 0.84rem;
+  }
+
+  .header_container {
+    gap: 15px;
+  }
+
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  .header_container {
+    gap: 5px;
+  }
+
+  .img_and_heading_text {
+    font-size: 1.2rem;
+  }
+}
