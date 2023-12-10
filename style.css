@@ -121,13 +121,18 @@ main {
     text-align: start;
     color: var(--Dark-purple);
 
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    width: 100%;
 }
 
-.header_container strong:is(:hover, :focus) {
+.header_container:is(:hover, :focus) {
     color: hsl(293, 93%, 24%);
 }
 
-.header_container strong:active {
+.header_container:active {
     color: var(--Grayish-purple);
 }
 
